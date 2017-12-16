@@ -1,0 +1,979 @@
+/*
+  * Project Name : gridSystemMAF
+  * Description  : This is grid system for elements using media query Css3 , you can use it to make your website resposive in all screens
+  * Author       : Mohssine Aboutaj
+  * Version      : v1.11.18
+*/
+/********************/
+/* some classes to reset and clear */
+.clearfix {
+  clear: both;
+}
+
+.hide {
+  display: none;
+}
+
+.ib, .nav .logo {
+  display: inline-block;
+}
+
+.nopm, .reset-all, .reset-all *, ul.navbar, .navbar * {
+  padding: 0;
+  margin: 0;
+}
+
+.overHide {
+  overflow: hidden;
+}
+
+.fl-l {
+  float: left;
+}
+
+.fl-r {
+  float: right;
+}
+
+.nofl, .reset-all, .reset-all * {
+  float: none;
+}
+
+.no-border, .reset-all, .reset-all * {
+  border: none;
+}
+
+.no-decore, .reset-all, .reset-all *, .nav .logo, ul.navbar, .navbar *, .no-decore li, .reset-all li, .nav .logo li, ul.navbar li, .navbar * li, .no-decore a, .reset-all a, .nav .logo a, ul.navbar a, .navbar * a {
+  text-decoration: none;
+  list-style: none;
+}
+
+.no-decore a, .reset-all a, .nav .logo a, ul.navbar a, .navbar * a {
+  color: #fff;
+}
+
+.txt-c {
+  text-align: center;
+}
+
+.cap {
+  text-transform: capitalize;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+/********************/
+/* reset border, margin, padding, float, textDecoration, listStyle */
+/********************/
+/* Grouping elements */
+.nav-btn, .btn {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+/********************/
+/* Grid-System for width of Elements using Media Query */
+/* All screens */
+.grid-full {
+  width: 100%;
+}
+
+.grid-half {
+  width: 50%;
+}
+
+/********************/
+/* Mobile screens */
+@media (max-width: 768px) {
+  /* Elements */
+  body {
+    width: 100%;
+    overflow-x: auto;
+    font-size: 8px;
+  }
+
+  p {
+    line-height: 1.4;
+  }
+
+  /* Classes */
+  .grid-12-xs {
+    width: 99%;
+  }
+
+  .grid-12-xs {
+    margin: 0% 0.5% 1% 0.25%;
+  }
+
+  .grid-11-xs {
+    width: 90.6666666667%;
+  }
+
+  .grid-11-xs {
+    margin: 0% 0.5% 1% 0.25%;
+  }
+
+  .grid-10-xs {
+    width: 82.3333333333%;
+  }
+
+  .grid-10-xs {
+    margin: 0% 0.5% 1% 0.25%;
+  }
+
+  .grid-9-xs {
+    width: 74%;
+  }
+
+  .grid-9-xs {
+    margin: 0% 0.5% 1% 0.25%;
+  }
+
+  .grid-8-xs {
+    width: 65.6666666667%;
+  }
+
+  .grid-8-xs {
+    margin: 0% 0.5% 1% 0.25%;
+  }
+
+  .grid-7-xs {
+    width: 57.3333333333%;
+  }
+
+  .grid-7-xs {
+    margin: 0% 0.5% 1% 0.25%;
+  }
+
+  .grid-6-xs {
+    width: 49%;
+  }
+
+  .grid-6-xs {
+    margin: 0% 0.5% 1% 0.25%;
+  }
+
+  .grid-5-xs {
+    width: 40.6666666667%;
+  }
+
+  .grid-5-xs {
+    margin: 0% 0.5% 1% 0.25%;
+  }
+
+  .grid-4-xs {
+    width: 32.3333333333%;
+  }
+
+  .grid-4-xs {
+    margin: 0% 0.5% 1% 0.25%;
+  }
+
+  .grid-3-xs {
+    width: 24%;
+  }
+
+  .grid-3-xs {
+    margin: 0% 0.5% 1% 0.25%;
+  }
+
+  .grid-2-xs {
+    width: 15.6666666667%;
+  }
+
+  .grid-2-xs {
+    margin: 0% 0.5% 1% 0.25%;
+  }
+
+  .grid-1-xs {
+    width: 7.3333333333%;
+  }
+
+  .grid-1-xs {
+    margin: 0% 0.5% 1% 0.25%;
+  }
+
+  .nav {
+    min-height: 60px;
+  }
+
+  .btn {
+    padding: 1px 2px;
+    margin: 1px;
+    font-size: 0.4em;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+    border-radius: 1px;
+  }
+
+  .container {
+    padding: 5px;
+    margin: 0;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  table {
+    overflow-x: auto;
+    min-width: 100% !important;
+  }
+}
+/* Tablet screens */
+@media (min-width: 769px) and (max-width: 991px) {
+  /* Elements */
+  p {
+    line-height: 1.6;
+  }
+
+  /* Classes */
+  .grid-12-sm {
+    width: 98%;
+  }
+
+  .grid-12-sm {
+    margin: 0% 1% 2% 0.5%;
+  }
+
+  .grid-11-sm {
+    width: 89.6666666667%;
+  }
+
+  .grid-11-sm {
+    margin: 0% 1% 2% 0.5%;
+  }
+
+  .grid-10-sm {
+    width: 81.3333333333%;
+  }
+
+  .grid-10-sm {
+    margin: 0% 1% 2% 0.5%;
+  }
+
+  .grid-9-sm {
+    width: 73%;
+  }
+
+  .grid-9-sm {
+    margin: 0% 1% 2% 0.5%;
+  }
+
+  .grid-8-sm {
+    width: 64.6666666667%;
+  }
+
+  .grid-8-sm {
+    margin: 0% 1% 2% 0.5%;
+  }
+
+  .grid-7-sm {
+    width: 56.3333333333%;
+  }
+
+  .grid-7-sm {
+    margin: 0% 1% 2% 0.5%;
+  }
+
+  .grid-6-sm {
+    width: 48%;
+  }
+
+  .grid-6-sm {
+    margin: 0% 1% 2% 0.5%;
+  }
+
+  .grid-5-sm {
+    width: 39.6666666667%;
+  }
+
+  .grid-5-sm {
+    margin: 0% 1% 2% 0.5%;
+  }
+
+  .grid-4-sm {
+    width: 31.3333333333%;
+  }
+
+  .grid-4-sm {
+    margin: 0% 1% 2% 0.5%;
+  }
+
+  .grid-3-sm {
+    width: 23%;
+  }
+
+  .grid-3-sm {
+    margin: 0% 1% 2% 0.5%;
+  }
+
+  .grid-2-sm {
+    width: 14.6666666667%;
+  }
+
+  .grid-2-sm {
+    margin: 0% 1% 2% 0.5%;
+  }
+
+  .grid-1-sm {
+    width: 6.3333333333%;
+  }
+
+  .grid-1-sm {
+    margin: 0% 1% 2% 0.5%;
+  }
+
+  .nav {
+    min-height: 55px;
+  }
+
+  .btn {
+    padding: 2px 4px;
+    margin: 2px;
+    font-size: 0.6em;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+  }
+
+  .container {
+    width: 97%;
+  }
+}
+/* Meduim screens */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Elements */
+  p {
+    line-height: 1.8;
+  }
+
+  /* Classes */
+  .grid-12-md {
+    width: 97%;
+  }
+
+  .grid-12-md {
+    margin: 0% 1.5% 0.75%;
+  }
+
+  .grid-11-md {
+    width: 88.6666666667%;
+  }
+
+  .grid-11-md {
+    margin: 0% 1.5% 0.75%;
+  }
+
+  .grid-10-md {
+    width: 80.3333333333%;
+  }
+
+  .grid-10-md {
+    margin: 0% 1.5% 0.75%;
+  }
+
+  .grid-9-md {
+    width: 72%;
+  }
+
+  .grid-9-md {
+    margin: 0% 1.5% 0.75%;
+  }
+
+  .grid-8-md {
+    width: 63.6666666667%;
+  }
+
+  .grid-8-md {
+    margin: 0% 1.5% 0.75%;
+  }
+
+  .grid-7-md {
+    width: 55.3333333333%;
+  }
+
+  .grid-7-md {
+    margin: 0% 1.5% 0.75%;
+  }
+
+  .grid-6-md {
+    width: 47%;
+  }
+
+  .grid-6-md {
+    margin: 0% 1.5% 0.75%;
+  }
+
+  .grid-5-md {
+    width: 38.6666666667%;
+  }
+
+  .grid-5-md {
+    margin: 0% 1.5% 0.75%;
+  }
+
+  .grid-4-md {
+    width: 30.3333333333%;
+  }
+
+  .grid-4-md {
+    margin: 0% 1.5% 0.75%;
+  }
+
+  .grid-3-md {
+    width: 22%;
+  }
+
+  .grid-3-md {
+    margin: 0% 1.5% 0.75%;
+  }
+
+  .grid-2-md {
+    width: 13.6666666667%;
+  }
+
+  .grid-2-md {
+    margin: 0% 1.5% 0.75%;
+  }
+
+  .grid-1-md {
+    width: 5.3333333333%;
+  }
+
+  .grid-1-md {
+    margin: 0% 1.5% 0.75%;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+/* Larger screens */
+@media (min-width: 1200px) {
+  /* Elements */
+  p {
+    line-height: 2;
+  }
+
+  /* Classes */
+  .grid-12-lg {
+    width: 96%;
+  }
+
+  .grid-12-lg {
+    margin: 0% 2% 1%;
+  }
+
+  .grid-11-lg {
+    width: 87.6666666667%;
+  }
+
+  .grid-11-lg {
+    margin: 0% 2% 1%;
+  }
+
+  .grid-10-lg {
+    width: 79.3333333333%;
+  }
+
+  .grid-10-lg {
+    margin: 0% 2% 1%;
+  }
+
+  .grid-9-lg {
+    width: 71%;
+  }
+
+  .grid-9-lg {
+    margin: 0% 2% 1%;
+  }
+
+  .grid-8-lg {
+    width: 62.6666666667%;
+  }
+
+  .grid-8-lg {
+    margin: 0% 2% 1%;
+  }
+
+  .grid-7-lg {
+    width: 54.3333333333%;
+  }
+
+  .grid-7-lg {
+    margin: 0% 2% 1%;
+  }
+
+  .grid-6-lg {
+    width: 46%;
+  }
+
+  .grid-6-lg {
+    margin: 0% 2% 1%;
+  }
+
+  .grid-5-lg {
+    width: 37.6666666667%;
+  }
+
+  .grid-5-lg {
+    margin: 0% 2% 1%;
+  }
+
+  .grid-4-lg {
+    width: 29.3333333333%;
+  }
+
+  .grid-4-lg {
+    margin: 0% 2% 1%;
+  }
+
+  .grid-3-lg {
+    width: 21%;
+  }
+
+  .grid-3-lg {
+    margin: 0% 2% 1%;
+  }
+
+  .grid-2-lg {
+    width: 12.6666666667%;
+  }
+
+  .grid-2-lg {
+    margin: 0% 2% 1%;
+  }
+
+  .grid-1-lg {
+    width: 4.3333333333%;
+  }
+
+  .grid-1-lg {
+    margin: 0% 2% 1%;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1700px;
+  }
+}
+/* Mobile screens and Tablet */
+@media (max-width: 991px) {
+  .navbar {
+    width: 100%;
+    float: none;
+  }
+
+  .navbar li {
+    display: block;
+  }
+
+  .dropdown {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 55px;
+    width: 100%;
+    height: 0%;
+    z-index: 3;
+    overflow: hidden;
+    padding: 0px 0px 0px 10px;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+  }
+
+  .dropdown a {
+    display: block;
+    font-size: 24px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+
+  .dropdown .active, .dropdown a:hover {
+    border: none;
+    display: block;
+  }
+
+  .dropdown-dark, .dropdown-light .active, .dropdown-light a:hover {
+    background-color: #272727 !important;
+    color: #fff !important;
+  }
+
+  .dropdown-light, .dropdown-dark .active, .dropdown-dark a:hover {
+    background-color: #fff !important;
+    color: #272727 !important;
+  }
+
+  .dropdown-custom {
+    background-color: transparent;
+    color: inherit;
+  }
+
+  .aside-menu a::before {
+    content: " - ";
+  }
+}
+/* Medium screens and Larger */
+@media (min-width: 992px) {
+  .nav-btn {
+    display: none;
+  }
+
+  .navbar li {
+    display: inline-block;
+  }
+
+  /* Aside menu bar */
+  .aside-menu {
+    position: absolute;
+    background-color: #272727 !important;
+    z-index: 3;
+    width: 200px !important;
+  }
+
+  .aside-menu li, .aside-menu a {
+    display: block;
+    width: 100%;
+  }
+}
+/* Classes use for Html pages and global styles for Elements */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+section {
+  margin: 30px 0px;
+  position: relative;
+}
+
+/* convert letters of all Heading to UPPERCASE */
+h1, h1 * {
+  text-transform: capitalize;
+  color: #272727;
+}
+
+h2, h2 * {
+  text-transform: capitalize;
+  color: #272727;
+}
+
+h3, h3 * {
+  text-transform: capitalize;
+  color: #272727;
+}
+
+h4, h4 * {
+  text-transform: capitalize;
+  color: #272727;
+}
+
+h5, h5 * {
+  text-transform: capitalize;
+  color: #272727;
+}
+
+h6, h6 * {
+  text-transform: capitalize;
+  color: #272727;
+}
+
+/********************/
+.nav {
+  margin: 0px 0px 5px 0px;
+  padding: 0;
+}
+
+.nav-dark, .footer-dark {
+  background-color: #272727;
+  color: #fff;
+}
+
+.nav-light, .footer-light {
+  background-color: #fff;
+  color: #272727;
+}
+
+ul.navbar, .navbar * {
+  text-transform: capitalize;
+}
+
+.navbar a {
+  padding: 5px 10px;
+}
+
+.nav-btn {
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+  border-radius: 10%;
+  border: 1px solid #bbb;
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 5px;
+  z-index: 3;
+}
+
+.nav-btn-right {
+  right: 5px;
+}
+
+.nav-btn-left {
+  left: 5px;
+}
+
+.nav-btn:hover {
+  color: #bbb;
+  border: 1px solid #fff;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+/* Overlay classes */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+.overlay-10 {
+  background: black;
+}
+
+.overlay-9 {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.overlay-8 {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.overlay-7 {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.overlay-6 {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.overlay-5 {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-4 {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.overlay-3 {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.overlay-2 {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.overlay-1 {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/********************/
+/* form styles */
+.form {
+  margin: auto;
+  text-align: center;
+}
+
+.form input {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  padding: 8px;
+  border: 1px solid #272727;
+}
+
+.form-light input {
+  border: 1px solid #ddd;
+  color: #272727;
+  background: #fff;
+}
+
+.form-dark input {
+  border: 1px solid #ddd;
+  color: #ddd;
+  background: #272727;
+}
+
+.form-trans input {
+  border: 1px solid #eee;
+  color: #eee;
+  background: transparent;
+}
+
+/********************/
+/* alert classes */
+.alert {
+  display: block;
+  padding: 5px;
+  margin: 5px 0px;
+  color: #272727;
+}
+
+/********************/
+/* alert styles */
+.alert-error {
+  background: #f5d251;
+}
+
+.alert-valide {
+  background: #7e7;
+}
+
+/********************/
+/* buttons style */
+.btn {
+  border: none;
+  display: inline-block;
+  text-transform: uppercase;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  margin: 5px;
+  padding: 2px 4px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.btn-sky {
+  background: #49b9ef;
+}
+
+.btn-sky:hover {
+  background: #49b9af;
+}
+
+.btn-fire {
+  background: #e11;
+}
+
+.btn-fire:hover {
+  background: #f11;
+}
+
+.btn-grass {
+  background: #1a1;
+}
+
+.btn-grass:hover {
+  background: #1b1;
+}
+
+/********************/
+/* table styles */
+.table {
+  margin: 10px 0px 20px 0px;
+  min-width: 325px;
+  display: table;
+  text-align: center;
+  -webkit-box-shadow: 3px 3px 7px #B5B5B5;
+  -moz-box-shadow: 3px 3px 7px #B5B5B5;
+  -ms-box-shadow: 3px 3px 7px #B5B5B5;
+  -o-box-shadow: 3px 3px 7px #B5B5B5;
+  box-shadow: 3px 3px 7px #B5B5B5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.table td {
+  padding: 4px;
+  vertical-align: middle;
+}
+
+.table-hover {
+  background: #fff;
+}
+
+.table-hover tr:hover {
+  background-color: #ddd;
+  cursor: default;
+}
+
+.table-hover tr:first-child {
+  background: none;
+}
+
+.table-alter tr:nth-child(odd) {
+  background: #ddd;
+}
+
+.table-alter tr:nth-child(even) {
+  background: #eee;
+}
+
+.table-darkhead thead, .table-darkhead tr:first-of-type {
+  background: #272727;
+  color: #eee;
+  text-transform: uppercase;
+}
+
+.table-lighthead thead, .table-lighthead tr:first-of-type {
+  background: #eee;
+  color: #272727;
+  text-transform: uppercase;
+}
+
+.table-border, .table-border td {
+  border: 1px solid  #ccc;
+  border-collapse: collapse;
+}
+
+/********************/
+
+/*# sourceMappingURL=gridSystemMAF.css.map */

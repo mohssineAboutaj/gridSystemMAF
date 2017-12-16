@@ -1,0 +1,431 @@
+/*
+  * Project Name : gridSystemMAF
+  * Description  : This is grid system for elements using media query Css3 , you can use it to make your website resposive in all screens
+  * Author       : Mohssine Aboutaj
+  * Version      : v1.11.18
+*/
+
+// function for prefixes CSS-3 property
+@mixin prefix($property, $value){
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+// Main colors on this framework
+$darkColor: #272727;
+$wColor: #fff;
+$bg: #eaeaea;
+$xColor: #eee;
+$zColor: #ddd;
+/********************/
+
+/* some classes to reset and clear */
+.clearfix { clear: both }
+.hide { display: none }
+.ib { display: inline-block }
+.nopm { padding: 0;margin: 0}
+.overHide { overflow: hidden}
+.fl-l { float: left}
+.fl-r { float: right}
+.nofl { float: none}
+.no-border { border: none}
+.no-decore, .no-decore li, .no-decore a {
+  text-decoration: none;
+  list-style: none;
+}
+.no-decore a { color: $wColor }
+.txt-c { text-align: center }
+.cap { text-transform: capitalize }
+.upper { text-transform: uppercase }
+/********************/
+
+/* reset border, margin, padding, float, textDecoration, listStyle */
+.reset-all, .reset-all * {
+  @extend .no-border;
+  @extend .no-decore;
+  @extend .nopm;
+  @extend .nofl;
+}
+/********************/
+
+// placeholder classes 
+/* Grouping elements */
+%trans {
+  @include prefix(transition, all .5s ease-in-out);
+  cursor: pointer;
+}
+/********************/
+
+/* Grid-System for width of Elements using Media Query */
+/* All screens */
+.grid-full { width: 100% }
+.grid-half { width: 50% }
+/********************/
+
+/* Mobile screens */
+@media ( max-width: 768px) {
+  /* Elements */
+  body {
+    width: 100%;
+    overflow-x: auto;
+    font-size: 8px;
+  }
+  p { line-height: 1.4 }
+  /* Classes */
+  @for $i from 12 through 1 {
+    .grid-#{$i}-xs { width: 100% / (12 / $i) - 1 }
+    .grid-#{$i}-xs { margin: 0% 0.5% 1% 0.25%; }
+  }
+  .nav { min-height: 60px }
+  .btn {
+    padding: 1px 2px;
+    margin: 1px;
+    font-size: 0.4em;
+    @include prefix(border-radius, 1px);
+  }
+  .container {
+    padding: 5px;
+    margin: 0;
+    overflow-x: auto;
+    width: 100%;
+  }
+  table {
+    overflow-x: auto;
+    min-width: 100% !important;
+  }
+}
+
+/* Tablet screens */
+@media ( min-width: 769px) and ( max-width: 991px) {
+  /* Elements */
+  p { line-height: 1.6 }
+  /* Classes */
+  @for $i from 12 through 1 {
+    .grid-#{$i}-sm { width: 100% / (12 / $i) - 2 }
+    .grid-#{$i}-sm { margin: 0% 1% 2% 0.5%; }
+  }
+  .nav { min-height: 55px }
+  .btn {
+    padding: 2px 4px;
+    margin: 2px;
+    font-size: 0.6em;
+    @include prefix(border-radius, 4px);
+  }
+  .container {
+    width: 97%;
+  }
+}
+
+/* Meduim screens */
+@media ( min-width: 992px) and ( max-width: 1199px) {
+  /* Elements */
+  p { line-height: 1.8 }
+  /* Classes */
+  @for $i from 12 through 1 {
+    .grid-#{$i}-md { width: 100% / (12 / $i) - 3 }
+    .grid-#{$i}-md { margin: 0% 1.5% 0.75%; }
+  }
+  .container {
+    width: 90%;
+  }
+}
+
+/* Larger screens */
+@media ( min-width: 1200px) {
+  /* Elements */
+  p { line-height: 2 }
+  /* Classes */
+  @for $i from 12 through 1 {
+    .grid-#{$i}-lg { width: 100% / (12 / $i) - 4 }
+    .grid-#{$i}-lg { margin: 0% 2% 1%; }
+  }
+  .container {
+    width: 90%;
+    max-width: 1700px;
+  }
+}
+
+/* Mobile screens and Tablet */
+@media (max-width: 991px) {
+  .navbar {
+    width: 100%;
+    float: none;
+  }
+  .navbar li {
+    display: block;
+  }
+  .dropdown {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 55px;
+    width: 100%;
+    height: 0%;
+    z-index: 3;
+    overflow: hidden;
+    padding: 0px 0px 0px 10px;
+    @include prefix(transition, all 0.5s linear);
+  }
+  .dropdown a {
+    display: block;
+    font-size: 24px;
+    @include prefix(transition, all .5s ease-in-out);
+    cursor: pointer;
+  }
+  .dropdown .active, .dropdown a:hover {
+    border: none;
+    display: block;
+  }
+  .dropdown-dark, .dropdown-light .active, .dropdown-light a:hover {
+    background-color: $darkColor !important;
+    color: $wColor !important;
+  }
+  .dropdown-light, .dropdown-dark .active, .dropdown-dark a:hover {
+    background-color: $wColor !important;
+    color: $darkColor !important;
+  }
+  .dropdown-custom {
+    background-color: transparent;
+    color: inherit;
+  }
+  .aside-menu a::before {
+    content: " - ";
+  }
+}
+
+/* Medium screens and Larger */
+@media (min-width: 992px){
+  .nav-btn {
+    display: none;
+  }
+  .navbar li {
+    display: inline-block;
+  }
+  /* Aside menu bar */
+  .aside-menu {
+    position: absolute;
+    background-color: $darkColor !important;
+    z-index: 3;
+    width: 200px !important;
+  }
+
+  .aside-menu li, .aside-menu a {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Classes use for Html pages and global styles for Elements */
+
+* { @include prefix(box-sizing, border-box);}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+section {
+  margin: 30px 0px;
+  position: relative;
+}
+
+/* convert letters of all Heading to UPPERCASE */
+@for $heading from 1 through 6 {
+  h#{$heading}, h#{$heading} * {
+    text-transform: capitalize;
+    color: $darkColor;
+  }
+}
+/********************/
+
+.nav {
+  margin: 0px 0px 5px 0px;
+  padding: 0;
+}
+
+.nav .logo {
+  @extend .ib;
+  @extend .no-decore;
+}
+
+.nav-dark, .footer-dark {
+  background-color: $darkColor;
+  color: $wColor;
+}
+
+.nav-light, .footer-light {
+  background-color: $wColor;
+  color: $darkColor;
+}
+
+ul.navbar , .navbar * {
+  @extend .no-decore;
+  @extend .nopm;
+  text-transform: capitalize
+}
+
+.navbar a { padding: 5px 10px; }
+
+.nav-btn {
+  @include prefix(border-radius, 10%);
+  border: 1px solid #bbb;
+  color: $wColor;
+  text-align: center;
+  font-size: 32px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 5px;
+  z-index: 3;
+  @extend %trans;
+}
+.nav-btn-right { right: 5px; }
+.nav-btn-left { left: 5px; }
+
+.nav-btn:hover {
+  color: #bbb;
+  border: 1px solid $wColor;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+/* Overlay classes */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: $wColor;
+}
+@for $opacityBg from 10 through 1 {
+  .overlay-#{$opacityBg} {
+      background: rgba(0,0,0,(1 / (10 / $opacityBg))); 
+  }
+}
+
+/********************/
+
+/* form styles */
+.form {
+  margin: auto;
+  text-align: center;
+}
+
+.form input {
+  @include prefix(border-radius, 10px);
+  padding: 8px;
+  border: 1px solid $darkColor;
+}
+
+.form-light input {
+  border: 1px solid $zColor;
+  color: $darkColor;
+  background: $wColor;
+}
+
+.form-dark input {
+  border: 1px solid $zColor;
+  color: $zColor;
+  background: $darkColor;
+}
+
+.form-trans input {
+  border: 1px solid $xColor;
+  color: $xColor;
+  background: transparent;
+}
+/********************/
+/* alert classes */
+.alert {
+  display: block;
+  padding: 5px;
+  margin: 5px 0px;
+  color: $darkColor;
+}
+/********************/
+
+/* alert styles */
+.alert-error { background: #f5d251 }
+.alert-valide { background: #7e7 }
+/********************/
+/* buttons style */
+.btn {
+  border: none;
+  display: inline-block;
+  text-transform: uppercase;
+  list-style: none;
+  text-decoration: none;
+  color: $wColor;
+  @extend %trans;
+  margin: 5px;
+  padding: 2px 4px;
+  @include prefix(border-radius, 5px);
+}
+
+.btn-sky { background: #49b9ef; }
+.btn-sky:hover { background: #49b9af; }
+
+.btn-fire { background: #e11; }
+.btn-fire:hover { background: #f11; }
+
+.btn-grass { background: #1a1; }
+.btn-grass:hover { background: #1b1; }
+/********************/
+
+/* table styles */
+.table {
+  margin: 10px 0px 20px 0px;
+  min-width: 325px;
+  display: table;
+  text-align: center;
+  @include prefix(box-shadow, 3px 3px 7px #B5B5B5);
+  @include prefix(border-radius, 5px);
+}
+
+.table td {
+  padding: 4px;
+  vertical-align: middle;
+}
+
+.table-hover { background: $wColor }
+
+.table-hover tr:hover {
+  background-color: $zColor;
+  cursor: default;
+}
+
+.table-hover tr:first-child { background: none }
+
+.table-alter tr:nth-child(odd) { background: $zColor; }
+
+.table-alter tr:nth-child(even) { background: $xColor; }
+
+.table-darkhead thead, .table-darkhead tr:first-of-type {
+  background: $darkColor;
+  color: $xColor;
+  text-transform: uppercase
+}
+
+.table-lighthead thead, .table-lighthead tr:first-of-type {
+  background: $xColor;
+  color: $darkColor;
+  text-transform: uppercase
+}
+
+.table-border, .table-border td {
+  border: 1px solid  #ccc;
+  border-collapse: collapse;
+}
+/********************/
