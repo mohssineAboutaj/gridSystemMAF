@@ -40,6 +40,7 @@ $zColor: #ddd;
 .txt-c { text-align: center }
 .cap { text-transform: capitalize }
 .upper { text-transform: uppercase }
+.rel { position: relative }
 /********************/
 
 /* reset border, margin, padding, float, textDecoration, listStyle */
@@ -53,6 +54,8 @@ $zColor: #ddd;
 
 // placeholder classes 
 /* Grouping elements */
+$left: left;
+$right: right;
 %trans {
   @include prefix(transition, all .5s ease-in-out);
   cursor: pointer;
@@ -150,6 +153,10 @@ $zColor: #ddd;
 
 /* Mobile screens and Tablet */
 @media (max-width: 991px) {
+  nav {
+    z-index: 3;
+    position: fixed;
+  }
   .navbar {
     width: 100%;
     float: none;
@@ -166,7 +173,7 @@ $zColor: #ddd;
     width: 100%;
     height: 0%;
     z-index: 3;
-    overflow: hidden;
+    overflow-y: auto;
     padding: 0px 0px 0px 10px;
     @include prefix(transition, all 0.5s linear);
   }
@@ -210,12 +217,14 @@ $zColor: #ddd;
     position: absolute;
     background-color: $darkColor !important;
     z-index: 3;
-    width: 200px !important;
+    text-transform: capitalize;
   }
 
   .aside-menu li, .aside-menu a {
     display: block;
     width: 100%;
+    font-size: 22px;
+    padding: 0px 5px 5px;
   }
 }
 
@@ -319,15 +328,53 @@ ul.navbar , .navbar * {
 
 /* form styles */
 .form {
-  margin: auto;
-  text-align: center;
+  max-width: 600px;
+  text-transform: capitalize;
 }
 
-.form input {
-  @include prefix(border-radius, 10px);
-  padding: 8px;
-  border: 1px solid $darkColor;
+.form .form-row {
+  overflow: hidden;
 }
+
+.form .form-row label {
+  float: $left;
+}
+
+.form .form-row .input-box {
+  position: relative;
+  float: $right;
+}
+
+.form .form-row .input-box input[type='radio'],
+.form .form-row .input-box input[type='checkbox'] {
+  float: $left;
+  margin: 0 5px;
+}
+
+.form .form-row .input-box input:not([type='radio']), 
+.form .form-row .input-box input:not([type='checkbox']), 
+.form .form-row .input-box select,
+.form .form-row .input-box textarea {
+  width: 100%;
+  padding: 5px;
+  @include prefix(border-radius, 10px);
+}
+
+.form > input[type="submit"], .form > input[type="reset"] {
+  font-family: fontAwesome, arial;
+  float: $right;
+  background-color: #AEA8D3;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  @include prefix(border-radius, 10px);
+}
+
+.form-center {
+  margin: 10px auto 100px;
+}
+
+.form-right { float: $right }
+.form-left { float: $left }
 
 .form-light input {
   border: 1px solid $zColor;
@@ -354,12 +401,11 @@ ul.navbar , .navbar * {
   margin: 5px 0px;
   color: $darkColor;
 }
+
+.alert-error { background-color: rgba(246, 71, 71, 0.25) }
+.alert-valide { background-color: rgba(145, 180, 150, 0.5) }
 /********************/
 
-/* alert styles */
-.alert-error { background: #f5d251 }
-.alert-valide { background: #7e7 }
-/********************/
 /* buttons style */
 .btn {
   border: none;
@@ -377,11 +423,39 @@ ul.navbar , .navbar * {
 .btn-sky { background: #49b9ef; }
 .btn-sky:hover { background: #49b9af; }
 
-.btn-fire { background: #e11; }
-.btn-fire:hover { background: #f11; }
+.btn-fire { background: #D64541; }
+.btn-fire:hover { background: #EF4836; }
 
-.btn-grass { background: #1a1; }
-.btn-grass:hover { background: #1b1; }
+.btn-grass { background: #91B496; }
+.btn-grass:hover { background: #87D37C; }
+
+.add-new {
+  position: fixed;
+  display: block;
+  z-index: 9999;
+  @include prefix(border-radius, 50%);
+  font-size: 20px !important;
+  font-weight: bold;
+  line-height: 20px;
+  width: 30px;
+  height: 30px;
+  padding: 5px 0;
+  text-align: center;
+  bottom: 10px;
+  left: 10px;
+  background: #49b9ef;
+  font-size: 10px;
+}
+
+.add-new:hover {
+  background-color: #49b9af;
+  @extend %trans;
+}
+
+.add-new * {
+  color: $wColor;
+  text-decoration: none;
+}
 /********************/
 
 /* table styles */
@@ -427,5 +501,58 @@ ul.navbar , .navbar * {
 .table-border, .table-border td {
   border: 1px solid  #ccc;
   border-collapse: collapse;
+}
+/********************/
+/* panel layout */
+.panel {
+  display: block;
+  margin-bottom: 20px;
+  padding: 0;
+  border: 1px solid $darkColor;
+  @include prefix(border-radius, 5px);
+  overflow: hidden;
+}
+
+.panel:first-of-type {
+  margin-top: 20px;
+}
+
+.panel .p-heading, .panel .p-body {
+  display: block;
+  padding: 5px;
+}
+
+.panel .p-heading {
+  background-color: #4B77BE;
+  margin: 0 !important;
+  position: relative;
+  color: $wColor
+}
+
+.panel .p-body {
+  background-color: $wColor;
+  margin: 0 !important;
+  text-transform: capitalize;
+  overflow: hidden
+}
+/********************/
+
+/* list styles */
+ul.list-odd li, ul.list-even li {
+  padding: 5px
+}
+
+ul.list-odd li:nth-child(odd) {
+  background-color: $xColor;
+}
+ul.list-odd li:nth-child(even) {
+  background-color: $zColor;
+}
+
+ul.list-even li:nth-child(even) {
+  background-color: $zColor;
+}
+ul.list-even li:nth-child(odd) {
+  background-color: $xColor;
 }
 /********************/

@@ -1,0 +1,166 @@
+/*
+  * Project Name : slider show MAF
+  * Athor        : Mohssine Aboutaj
+  * version      : v1.0
+  * Date         : 14/11/2017
+  * Description  : this is simple slider show created by Mohssine Aboutaj using javaScript and Css3
+  * License      : Free
+*/
+
+.sliderShowMAF {
+  position: relative;
+  display: block;
+  text-align: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sliderBox {
+  text-align: center !important;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  display: none;
+}
+
+.activeSlide {
+  display: block !important;
+}
+
+.rightArrow, .leftArrow {
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  font-size: 24px;
+  color: #888;
+  background-color: #eee;
+  cursor: pointer;  
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.rightArrow { right: 0 }
+
+.leftArrow { left: 0 }
+
+.rightArrow:hover , .leftArrow:hover {
+  color: #eee;
+  background-color: #888;
+}
+
+/********* some animation *********/
+
+/* fadeOut animation */
+@-webkit-keyframes fadeOut {
+  0%   { opacity: 1}
+  100% { opacity: 0}
+}
+
+@-moz-keyframes fadeOut {
+  0%   { opacity: 1}
+  100% { opacity: 0}
+}
+
+@-ms-keyframes fadeOut {
+  0%   { opacity: 1}
+  100% { opacity: 0}
+}
+
+@-o-keyframes fadeOut {
+  0%   { opacity: 1}
+  100% { opacity: 0}
+}
+
+@keyframes fadeOut {
+  0%   { opacity: 1}
+  100% { opacity: 0}
+}
+/********************/
+
+/* fadeIn animation */
+@-webkit-keyframes fadeIn {
+  0%   { opacity: 0}
+  100% { opacity: 1}
+}
+
+@-moz-keyframes fadeIn {
+  0%   { opacity: 0}
+  100% { opacity: 1}
+}
+
+@-ms-keyframes fadeIn {
+  0%   { opacity: 0}
+  100% { opacity: 1}
+}
+
+@-o-keyframes fadeIn {
+  0%   { opacity: 0}
+  100% { opacity: 1}
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0}
+  100% { opacity: 1}
+}
+/********************/
+
+/* dropin */
+@-webkit-keyframes dropIn {
+  0%   { width: 0%}
+  100% { width: 100%}
+}
+
+@-moz-keyframes dropIn {
+  0%   { width: 0%}
+  100% { width: 100%}
+}
+
+@-ms-keyframes dropIn {
+  0%   { width: 0%}
+  100% { width: 100%}
+}
+
+@-o-keyframes dropIn {
+  0%   { width: 0%}
+  100% { width: 100%}
+}
+
+@keyframes dropIn {
+  0%   { width: 0%}
+  100% { width: 100%}
+}
+/***************/
+
+/* dropout */
+@-webkit-keyframes dropOut {
+  0%   { width: 100%}
+  100% { width: 0%}
+}
+
+@-moz-keyframes dropOut {
+  0%   { width: 100%}
+  100% { width: 0%}
+}
+
+@-ms-keyframes dropOut {
+  0%   { width: 100%}
+  100% { width: 0%}
+}
+
+@-o-keyframes dropOut {
+  0%   { width: 100%}
+  100% { width: 0%}
+}
+
+@keyframes dropOut {
+  0%   { width: 100%}
+  100% { width: 0%}
+}
