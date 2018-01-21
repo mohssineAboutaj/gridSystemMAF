@@ -67,7 +67,7 @@ addClassActive('.navbar', 'a', 'active');
 var btnMenu = document.querySelector('.btn-menu'),
     asideMenu = document.querySelector('.aside-menu');
 
-if (btnMenu) {
+if (btnMenu != null) {
   btnMenu.addEventListener("click",function(){
     asideMenu.classList.toggle('hide');
   });
