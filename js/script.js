@@ -54,6 +54,7 @@ function addClassActive(box, elements, className){
 }
 addClassActive('.navbar', 'a', 'active');
 
+/*
 // aside-nenu
 var btnMenu = document.querySelector('.btn-menu'),
     asideMenu = document.querySelector('.aside-menu');
@@ -63,21 +64,20 @@ if (btnMenu !== null) {
     asideMenu.classList.toggle('hide');
   });
 }
+*/
 
 // navigation Bar show or hidden by the click
 var navbtn = document.querySelector('.nav-btn'),
     navbar = document.querySelector('.navbar');
 
-if (navbtn !== null && navbar !== null) {
-  navbtn.onclick = function(){
-    if(navbar.style.height === '100%'){
-      navbar.style.height = '0%';
-      navbtn.innerHTML = '&equiv;';
-    } else {
-      navbar.style.height = '100%';
-    }
-  };
-}
+navbtn.onclick = function(){
+  if(navbar.style.height === '100%'){
+    navbar.style.height = '0%';
+    navbtn.innerHTML = '&equiv;';
+  } else {
+    navbar.style.height = '100%';
+  }
+};
   
 if (window.innerWidth < 992) {
   navbar.querySelectorAll('a').forEach(function(link) {
