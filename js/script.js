@@ -58,7 +58,7 @@ addClassActive('.navbar', 'a', 'active');
 var btnMenu = document.querySelector('.btn-menu'),
     asideMenu = document.querySelector('.aside-menu');
 
-if (btnMenu) {
+if (btnMenu !== null) {
   btnMenu.addEventListener("click",function(){
     asideMenu.classList.toggle('hide');
   });
@@ -68,7 +68,7 @@ if (btnMenu) {
 var navbtn = document.querySelector('.nav-btn'),
     navbar = document.querySelector('.navbar');
 
-if (navbtn && navbar) {
+if (navbtn !== null && navbar !== null) {
   navbtn.onclick = function(){
     if(navbar.style.height === '100%'){
       navbar.style.height = '0%';
