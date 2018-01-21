@@ -51,20 +51,7 @@ function addClassActive(box, elements, className){
       }
     this.classList.add(className);
   };}
-}
-addClassActive('.navbar', 'a', 'active');
-
-/*
-// aside-nenu
-var btnMenu = document.querySelector('.btn-menu'),
-    asideMenu = document.querySelector('.aside-menu');
-
-if (btnMenu !== null) {
-  btnMenu.addEventListener("click",function(){
-    asideMenu.classList.toggle('hide');
-  });
-}
-*/
+}addClassActive('.navbar', 'a', 'active');
 
 // navigation Bar show or hidden by the click
 var navbtn = document.querySelector('.nav-btn'),
