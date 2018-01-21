@@ -58,11 +58,13 @@ addClassActive('.navbar', 'a', 'active');
 var btnMenu = document.querySelector('.btn-menu'),
     asideMenu = document.querySelector('.aside-menu');
 
+/*
 if (btnMenu) {
   btnMenu.addEventListener("click",function(){
     asideMenu.classList.toggle('hide');
   });
 }
+*/
 
 // navigation Bar show or hidden by the click
 var navbtn = document.querySelector('.nav-btn'),

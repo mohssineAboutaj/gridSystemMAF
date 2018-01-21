@@ -64,7 +64,7 @@
   text-transform: uppercase;
 }
 
-.rel {
+.rel, body, header, section, footer, .form .form-row .input-box, .panel .p-heading {
   position: relative;
 }
 
@@ -674,16 +674,21 @@
 }
 
 body {
-  position: relative;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
+header {
+  margin-bottom: 50px 0px;
+}
+
 section {
-  margin: 30px 0px;
-  position: relative;
+  margin: 50px 0px;
+}
+
+footer {
+  margin-top: 50px 0px;
 }
 
 /* convert letters of all Heading to UPPERCASE */
@@ -843,7 +848,6 @@ ul.navbar, .navbar * {
 }
 
 .form .form-row .input-box {
-  position: relative;
   float: right;
 }
 
@@ -1088,7 +1092,6 @@ ul.navbar, .navbar * {
 .panel .p-heading {
   background-color: #4B77BE;
   margin: 0 !important;
-  position: relative;
   color: #fff;
 }
 
