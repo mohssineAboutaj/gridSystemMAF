@@ -2,7 +2,7 @@
   * Project Name : gridSystemMAF
   * Description  : This is grid system for elements using media query Css3 , you can use it to make your website resposive in all screens
   * Author       : Mohssine Aboutaj
-  * Version      : v1.11.18
+  * Version      : v1.1.20
 */
 
 // function for prefixes CSS-3 property
@@ -80,7 +80,7 @@ $right: right;
   /* Classes */
   @for $i from 12 through 1 {
     .grid-#{$i}-xs { width: 100% / (12 / $i) - 1 }
-    .grid-#{$i}-xs { margin: 0% 0.5% 1% 0.25%; }
+    .grid-#{$i}-xs { margin: 0% 0.5% 0.5%; }
   }
   .nav { min-height: 60px }
   .btn {
@@ -108,7 +108,7 @@ $right: right;
   /* Classes */
   @for $i from 12 through 1 {
     .grid-#{$i}-sm { width: 100% / (12 / $i) - 2 }
-    .grid-#{$i}-sm { margin: 0% 1% 2% 0.5%; }
+    .grid-#{$i}-sm { margin: 0% 1% 1%; }
   }
   .nav { min-height: 55px }
   .btn {
@@ -129,7 +129,7 @@ $right: right;
   /* Classes */
   @for $i from 12 through 1 {
     .grid-#{$i}-md { width: 100% / (12 / $i) - 3 }
-    .grid-#{$i}-md { margin: 0% 1.5% 0.75%; }
+    .grid-#{$i}-md { margin: 0% 1.5% 1.5%; }
   }
   .container {
     width: 90%;
@@ -143,7 +143,7 @@ $right: right;
   /* Classes */
   @for $i from 12 through 1 {
     .grid-#{$i}-lg { width: 100% / (12 / $i) - 4 }
-    .grid-#{$i}-lg { margin: 0% 2% 1%; }
+    .grid-#{$i}-lg { margin: 0% 2% 2%; }
   }
   .container {
     width: 90%;
@@ -407,6 +407,8 @@ ul.navbar , .navbar * {
 /********************/
 
 /* buttons style */
+button { @extend %trans }
+
 .btn {
   border: none;
   display: inline-block;

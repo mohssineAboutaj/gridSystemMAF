@@ -2,7 +2,7 @@
   * Project Name : gridSystemMAF
   * Description  : This is grid system for elements using media query Css3 , you can use it to make your website resposive in all screens
   * Author       : Mohssine Aboutaj
-  * Version      : v1.11.18
+  * Version      : v1.1.20
 */
 /********************/
 /* some classes to reset and clear */
@@ -72,7 +72,7 @@
 /* reset border, margin, padding, float, textDecoration, listStyle */
 /********************/
 /* Grouping elements */
-.nav-btn, .btn, .add-new:hover {
+.nav-btn, button, .btn, .add-new:hover {
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
@@ -112,23 +112,23 @@
   }
 
   .grid-12-xs {
-    margin: 0% 0.5% 1% 0.25%;
+    margin: 0% 0.5% 0.5%;
   }
 
   .grid-11-xs {
-    width: 90.6666666667%;
+    width: 90.66667%;
   }
 
   .grid-11-xs {
-    margin: 0% 0.5% 1% 0.25%;
+    margin: 0% 0.5% 0.5%;
   }
 
   .grid-10-xs {
-    width: 82.3333333333%;
+    width: 82.33333%;
   }
 
   .grid-10-xs {
-    margin: 0% 0.5% 1% 0.25%;
+    margin: 0% 0.5% 0.5%;
   }
 
   .grid-9-xs {
@@ -136,23 +136,23 @@
   }
 
   .grid-9-xs {
-    margin: 0% 0.5% 1% 0.25%;
+    margin: 0% 0.5% 0.5%;
   }
 
   .grid-8-xs {
-    width: 65.6666666667%;
+    width: 65.66667%;
   }
 
   .grid-8-xs {
-    margin: 0% 0.5% 1% 0.25%;
+    margin: 0% 0.5% 0.5%;
   }
 
   .grid-7-xs {
-    width: 57.3333333333%;
+    width: 57.33333%;
   }
 
   .grid-7-xs {
-    margin: 0% 0.5% 1% 0.25%;
+    margin: 0% 0.5% 0.5%;
   }
 
   .grid-6-xs {
@@ -160,23 +160,23 @@
   }
 
   .grid-6-xs {
-    margin: 0% 0.5% 1% 0.25%;
+    margin: 0% 0.5% 0.5%;
   }
 
   .grid-5-xs {
-    width: 40.6666666667%;
+    width: 40.66667%;
   }
 
   .grid-5-xs {
-    margin: 0% 0.5% 1% 0.25%;
+    margin: 0% 0.5% 0.5%;
   }
 
   .grid-4-xs {
-    width: 32.3333333333%;
+    width: 32.33333%;
   }
 
   .grid-4-xs {
-    margin: 0% 0.5% 1% 0.25%;
+    margin: 0% 0.5% 0.5%;
   }
 
   .grid-3-xs {
@@ -184,23 +184,23 @@
   }
 
   .grid-3-xs {
-    margin: 0% 0.5% 1% 0.25%;
+    margin: 0% 0.5% 0.5%;
   }
 
   .grid-2-xs {
-    width: 15.6666666667%;
+    width: 15.66667%;
   }
 
   .grid-2-xs {
-    margin: 0% 0.5% 1% 0.25%;
+    margin: 0% 0.5% 0.5%;
   }
 
   .grid-1-xs {
-    width: 7.3333333333%;
+    width: 7.33333%;
   }
 
   .grid-1-xs {
-    margin: 0% 0.5% 1% 0.25%;
+    margin: 0% 0.5% 0.5%;
   }
 
   .nav {
@@ -243,23 +243,23 @@
   }
 
   .grid-12-sm {
-    margin: 0% 1% 2% 0.5%;
+    margin: 0% 1% 1%;
   }
 
   .grid-11-sm {
-    width: 89.6666666667%;
+    width: 89.66667%;
   }
 
   .grid-11-sm {
-    margin: 0% 1% 2% 0.5%;
+    margin: 0% 1% 1%;
   }
 
   .grid-10-sm {
-    width: 81.3333333333%;
+    width: 81.33333%;
   }
 
   .grid-10-sm {
-    margin: 0% 1% 2% 0.5%;
+    margin: 0% 1% 1%;
   }
 
   .grid-9-sm {
@@ -267,23 +267,23 @@
   }
 
   .grid-9-sm {
-    margin: 0% 1% 2% 0.5%;
+    margin: 0% 1% 1%;
   }
 
   .grid-8-sm {
-    width: 64.6666666667%;
+    width: 64.66667%;
   }
 
   .grid-8-sm {
-    margin: 0% 1% 2% 0.5%;
+    margin: 0% 1% 1%;
   }
 
   .grid-7-sm {
-    width: 56.3333333333%;
+    width: 56.33333%;
   }
 
   .grid-7-sm {
-    margin: 0% 1% 2% 0.5%;
+    margin: 0% 1% 1%;
   }
 
   .grid-6-sm {
@@ -291,23 +291,23 @@
   }
 
   .grid-6-sm {
-    margin: 0% 1% 2% 0.5%;
+    margin: 0% 1% 1%;
   }
 
   .grid-5-sm {
-    width: 39.6666666667%;
+    width: 39.66667%;
   }
 
   .grid-5-sm {
-    margin: 0% 1% 2% 0.5%;
+    margin: 0% 1% 1%;
   }
 
   .grid-4-sm {
-    width: 31.3333333333%;
+    width: 31.33333%;
   }
 
   .grid-4-sm {
-    margin: 0% 1% 2% 0.5%;
+    margin: 0% 1% 1%;
   }
 
   .grid-3-sm {
@@ -315,23 +315,23 @@
   }
 
   .grid-3-sm {
-    margin: 0% 1% 2% 0.5%;
+    margin: 0% 1% 1%;
   }
 
   .grid-2-sm {
-    width: 14.6666666667%;
+    width: 14.66667%;
   }
 
   .grid-2-sm {
-    margin: 0% 1% 2% 0.5%;
+    margin: 0% 1% 1%;
   }
 
   .grid-1-sm {
-    width: 6.3333333333%;
+    width: 6.33333%;
   }
 
   .grid-1-sm {
-    margin: 0% 1% 2% 0.5%;
+    margin: 0% 1% 1%;
   }
 
   .nav {
@@ -366,23 +366,23 @@
   }
 
   .grid-12-md {
-    margin: 0% 1.5% 0.75%;
+    margin: 0% 1.5% 1.5%;
   }
 
   .grid-11-md {
-    width: 88.6666666667%;
+    width: 88.66667%;
   }
 
   .grid-11-md {
-    margin: 0% 1.5% 0.75%;
+    margin: 0% 1.5% 1.5%;
   }
 
   .grid-10-md {
-    width: 80.3333333333%;
+    width: 80.33333%;
   }
 
   .grid-10-md {
-    margin: 0% 1.5% 0.75%;
+    margin: 0% 1.5% 1.5%;
   }
 
   .grid-9-md {
@@ -390,23 +390,23 @@
   }
 
   .grid-9-md {
-    margin: 0% 1.5% 0.75%;
+    margin: 0% 1.5% 1.5%;
   }
 
   .grid-8-md {
-    width: 63.6666666667%;
+    width: 63.66667%;
   }
 
   .grid-8-md {
-    margin: 0% 1.5% 0.75%;
+    margin: 0% 1.5% 1.5%;
   }
 
   .grid-7-md {
-    width: 55.3333333333%;
+    width: 55.33333%;
   }
 
   .grid-7-md {
-    margin: 0% 1.5% 0.75%;
+    margin: 0% 1.5% 1.5%;
   }
 
   .grid-6-md {
@@ -414,23 +414,23 @@
   }
 
   .grid-6-md {
-    margin: 0% 1.5% 0.75%;
+    margin: 0% 1.5% 1.5%;
   }
 
   .grid-5-md {
-    width: 38.6666666667%;
+    width: 38.66667%;
   }
 
   .grid-5-md {
-    margin: 0% 1.5% 0.75%;
+    margin: 0% 1.5% 1.5%;
   }
 
   .grid-4-md {
-    width: 30.3333333333%;
+    width: 30.33333%;
   }
 
   .grid-4-md {
-    margin: 0% 1.5% 0.75%;
+    margin: 0% 1.5% 1.5%;
   }
 
   .grid-3-md {
@@ -438,23 +438,23 @@
   }
 
   .grid-3-md {
-    margin: 0% 1.5% 0.75%;
+    margin: 0% 1.5% 1.5%;
   }
 
   .grid-2-md {
-    width: 13.6666666667%;
+    width: 13.66667%;
   }
 
   .grid-2-md {
-    margin: 0% 1.5% 0.75%;
+    margin: 0% 1.5% 1.5%;
   }
 
   .grid-1-md {
-    width: 5.3333333333%;
+    width: 5.33333%;
   }
 
   .grid-1-md {
-    margin: 0% 1.5% 0.75%;
+    margin: 0% 1.5% 1.5%;
   }
 
   .container {
@@ -474,23 +474,23 @@
   }
 
   .grid-12-lg {
-    margin: 0% 2% 1%;
+    margin: 0% 2% 2%;
   }
 
   .grid-11-lg {
-    width: 87.6666666667%;
+    width: 87.66667%;
   }
 
   .grid-11-lg {
-    margin: 0% 2% 1%;
+    margin: 0% 2% 2%;
   }
 
   .grid-10-lg {
-    width: 79.3333333333%;
+    width: 79.33333%;
   }
 
   .grid-10-lg {
-    margin: 0% 2% 1%;
+    margin: 0% 2% 2%;
   }
 
   .grid-9-lg {
@@ -498,23 +498,23 @@
   }
 
   .grid-9-lg {
-    margin: 0% 2% 1%;
+    margin: 0% 2% 2%;
   }
 
   .grid-8-lg {
-    width: 62.6666666667%;
+    width: 62.66667%;
   }
 
   .grid-8-lg {
-    margin: 0% 2% 1%;
+    margin: 0% 2% 2%;
   }
 
   .grid-7-lg {
-    width: 54.3333333333%;
+    width: 54.33333%;
   }
 
   .grid-7-lg {
-    margin: 0% 2% 1%;
+    margin: 0% 2% 2%;
   }
 
   .grid-6-lg {
@@ -522,23 +522,23 @@
   }
 
   .grid-6-lg {
-    margin: 0% 2% 1%;
+    margin: 0% 2% 2%;
   }
 
   .grid-5-lg {
-    width: 37.6666666667%;
+    width: 37.66667%;
   }
 
   .grid-5-lg {
-    margin: 0% 2% 1%;
+    margin: 0% 2% 2%;
   }
 
   .grid-4-lg {
-    width: 29.3333333333%;
+    width: 29.33333%;
   }
 
   .grid-4-lg {
-    margin: 0% 2% 1%;
+    margin: 0% 2% 2%;
   }
 
   .grid-3-lg {
@@ -546,23 +546,23 @@
   }
 
   .grid-3-lg {
-    margin: 0% 2% 1%;
+    margin: 0% 2% 2%;
   }
 
   .grid-2-lg {
-    width: 12.6666666667%;
+    width: 12.66667%;
   }
 
   .grid-2-lg {
-    margin: 0% 2% 1%;
+    margin: 0% 2% 2%;
   }
 
   .grid-1-lg {
-    width: 4.3333333333%;
+    width: 4.33333%;
   }
 
   .grid-1-lg {
-    margin: 0% 2% 1%;
+    margin: 0% 2% 2%;
   }
 
   .container {

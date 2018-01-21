@@ -39,15 +39,7 @@ document.querySelectorAll('.confirm').forEach(function(confirmBtn) {
   });
 }, this);
 
-/*
-document.querySelectorAll('a').forEach(function(confirmBtn) {
-  confirmBtn.addEventListener("click", function(e){
-  e.preventDefault();
-    return confirm("Are you sure you want to "+ confirmBtn.textContent +" ?") ? location.href = confirmBtn.getAttribute('href') : null;
-  });
-}, this);
-*/
-
+// function to add Class Active on active link
 function addClassActive(box, elements, className){
   var link = document.querySelector(box).querySelectorAll(elements),
       i;
@@ -63,24 +55,13 @@ function addClassActive(box, elements, className){
 addClassActive('.navbar', 'a', 'active');
 
 // aside-nenu
-
 var btnMenu = document.querySelector('.btn-menu'),
     asideMenu = document.querySelector('.aside-menu');
 
-if (btnMenu != null) {
+if (btnMenu) {
   btnMenu.addEventListener("click",function(){
     asideMenu.classList.toggle('hide');
   });
-}
-
-// add-new btn
-function btnAddNew(btnName){
-  var addNew = document.querySelector(btnName);
-  if(document.body.clientHeight <= window.innerHeight){
-      addNew.style.display = 'none';
-  } else {
-      addNew.style.display = 'block';
-  }
 }
 
 // navigation Bar show or hidden by the click
@@ -113,33 +94,6 @@ function displayMiniNavbar(){
     navbar.style.height = '100%';
     navbtn.innerHTML = '&equiv;';
   }
-}
-
-// live preview
-function livePreview(theInput, theOutput){
-  var myInput = document.querySelector(theInput),
-      myOutput = document.querySelector(theOutput);
-  function inputOutput() {
-    myOutput.innerHTML = this.value;
-  }
-
-  myInput.onkeyup = inputOutput;
-  myInput.onblur = inputOutput;
-}
-if (document.querySelector('.live-preview')) {
-  livePreview('#name','h3');
-  livePreview('#desc','p');
-  livePreview('#price','.price');
-}
-
-/*setInterval(function(){
-  document.getElementById('img').src = '<?php echo basename( ?>' +
-    document.querySelector('input[type="file"]').value + '<?php echo ) ?>';
-}, 500);*/
-
-// change profile img
-function changeImg(){
-  document.querySelector('.change-img').click();
 }
 
 // custom the input file
