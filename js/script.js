@@ -67,10 +67,11 @@ addClassActive('.navbar', 'a', 'active');
 var btnMenu = document.querySelector('.btn-menu'),
     asideMenu = document.querySelector('.aside-menu');
 
-btnMenu.addEventListener("click",function(){
-  asideMenu.classList.toggle('hide');
-});
-
+if (btnMenu) {
+  btnMenu.addEventListener("click",function(){
+    asideMenu.classList.toggle('hide');
+  });
+}
 
 // add-new btn
 function btnAddNew(btnName){
