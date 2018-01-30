@@ -76,17 +76,17 @@ $right: right;
     overflow-x: auto;
     font-size: 8px;
   }
-  p { line-height: 1.4 }
+  p { line-height: 1.2 }
   /* Classes */
   @for $i from 12 through 1 {
     .grid-#{$i}-xs { width: 100% / (12 / $i) - 1 }
     .grid-#{$i}-xs { margin: 0% 0.5% 0.5%; }
   }
   .nav { min-height: 60px }
-  .btn {
-    padding: 1px 2px;
+  .btn, .btn::before {
+    padding: 2px 5px !important;
     margin: 1px;
-    font-size: 0.4em;
+    font-size: 1.5em;
     @include prefix(border-radius, 1px);
   }
   .container {
@@ -104,17 +104,17 @@ $right: right;
 /* Tablet screens */
 @media ( min-width: 769px) and ( max-width: 991px) {
   /* Elements */
-  p { line-height: 1.6 }
+  p { line-height: 1.3 }
   /* Classes */
   @for $i from 12 through 1 {
     .grid-#{$i}-sm { width: 100% / (12 / $i) - 2 }
     .grid-#{$i}-sm { margin: 0% 1% 1%; }
   }
   .nav { min-height: 55px }
-  .btn {
-    padding: 2px 4px;
+  .btn, .btn::before {
+    padding: 5px 10px !important;
     margin: 2px;
-    font-size: 0.6em;
+    font-size: 1.3em;
     @include prefix(border-radius, 4px);
   }
   .container {
@@ -125,11 +125,17 @@ $right: right;
 /* Meduim screens */
 @media ( min-width: 992px) and ( max-width: 1199px) {
   /* Elements */
-  p { line-height: 1.8 }
+  p { line-height: 1.4 }
   /* Classes */
   @for $i from 12 through 1 {
     .grid-#{$i}-md { width: 100% / (12 / $i) - 3 }
     .grid-#{$i}-md { margin: 0% 1.5% 1.5%; }
+  }
+  .btn, .btn::before {
+    padding: 7px 15px !important;
+    margin: 3px;
+    font-size: 1.1em;
+    @include prefix(border-radius, 1px);
   }
   .container {
     width: 90%;
@@ -139,11 +145,17 @@ $right: right;
 /* Larger screens */
 @media ( min-width: 1200px) {
   /* Elements */
-  p { line-height: 2 }
+  p { line-height: 1.5 }
   /* Classes */
   @for $i from 12 through 1 {
     .grid-#{$i}-lg { width: 100% / (12 / $i) - 4 }
     .grid-#{$i}-lg { margin: 0% 2% 2%; }
+  }
+  .btn, .btn::before {
+    padding: 10px 20p !importantx;
+    margin: 4px;
+    font-size: 1em;
+    @include prefix(border-radius, 5px);
   }
   .container {
     width: 90%;
@@ -158,7 +170,7 @@ $right: right;
     position: fixed;
   }
   .navbar {
-    width: 100%;
+    width: 100% !important;
     float: none;
   }
   .navbar li {
@@ -243,15 +255,15 @@ header, section, footer {
   @extend .rel;
 }
 
-header { margin-bottom: 50px 0px }
+header { margin-bottom: 30px }
 
-section { margin: 50px 0px }
+section { margin: 30px 0px }
 
-footer { margin-top: 50px 0px }
+footer { margin-top: 30px }
 /* convert letters of all Heading to UPPERCASE */
 @for $heading from 1 through 6 {
   h#{$heading}, h#{$heading} * {
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: $darkColor;
   }
 }
@@ -460,6 +472,45 @@ button { @extend %trans }
 .add-new * {
   color: $wColor;
   text-decoration: none;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-trans { background: none; }
+
+.btn-animate {
+  @extend .overHide;
+  display: inline-block;
+}
+
+.btn-animate .btn::before {
+  content: attr(data-html);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.btn-animate-ver .btn::before {
+  top: 105%;
+  left: 0;
+}
+
+.btn-animate-ver:hover .btn {
+  @include prefix(transform, translateY(-105%));
+}
+
+.btn-animate-hor .btn::before {
+  left: -105%;
+  top: 0;
+}
+
+.btn-animate-hor:hover .btn {
+  @include prefix(transform, translateX(105%));
 }
 /********************/
 

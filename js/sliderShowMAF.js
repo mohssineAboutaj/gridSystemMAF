@@ -15,9 +15,9 @@ var mainSliderBox = document.querySelector('.sliderShowMAF'),
     i = 0;
 
 // set content and classes in the Arrows
-rightArrow.textContent = '>';
+rightArrow.innerHTML = '<i class="fa fa-chevron-right fa-2x"></i>';
 rightArrow.classList = 'rightArrow';
-leftArrow.textContent = '<';
+leftArrow.innerHTML = '<i class="fa fa-chevron-left fa-2x"></i>';
 leftArrow.classList = 'leftArrow';
 
 // append the Arrows created into main slider box

@@ -58,13 +58,11 @@ addClassActive('.navbar', 'a', 'active');
 var btnMenu = document.querySelector('.btn-menu'),
     asideMenu = document.querySelector('.aside-menu');
 
-/*
 if (btnMenu) {
   btnMenu.addEventListener("click",function(){
     asideMenu.classList.toggle('hide');
   });
 }
-*/
 
 // navigation Bar show or hidden by the click
 var navbtn = document.querySelector('.nav-btn'),
@@ -124,4 +122,13 @@ if (document.querySelector('.input-file')) {
       '<i class="fa fa-check"></i> upload <u style="font-size: .5em">' +
       inputFile.value + '</u>';
   };
+}
+
+// progress bar
+var progressContainer = document.querySelectorAll('.progress'),
+    i;
+if (progressContainer) {
+  for(i = 0;i < progressContainer.length;i++){
+    progressContainer[i].querySelector('span').style.width = progressContainer[i].querySelector('span').getAttribute('progress-value');
+  }
 }
