@@ -1,0 +1,15 @@
+// function for prefixes CSS-3 property
+@mixin prefix($property, $value){
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+// Main colors on this framework
+$darkColor: #272727;
+$wColor: #fff;
+$mainColor: #03C9A9;
+$xColor: #eaeaea;
+$zColor: #ddd;

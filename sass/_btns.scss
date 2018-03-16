@@ -1,0 +1,103 @@
+/* buttons style */
+button { @extend %trans }
+
+.btn {
+  border: none;
+  display: inline-block;
+  text-transform: uppercase;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  @extend %trans;
+  margin: 5px;
+  padding: 2px 4px;
+  @include prefix(border-radius, 5px);
+}
+
+.btn-sky { background: rgb(25, 181, 254) }
+.btn-sky:hover { background: rgba(25, 181, 254, .75) }
+
+.btn-fire { background: rgb(217, 30, 24) }
+.btn-fire:hover { background: rgba(217, 30, 24, .75) }
+
+.btn-grass { background: rgb(135, 211, 124) }
+.btn-grass:hover { background: rgba(135, 211, 124, .75) }
+
+.add-new {
+  position: fixed;
+  @extend .block;
+  z-index: 9999;
+  @include prefix(border-radius, 50%);
+  font-size: 20px !important;
+  font-weight: bold;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  @extend .txt-c;
+  bottom: 10px;
+  left: 10px;
+  background: #49b9ef;
+}
+
+.add-new:hover {
+  background-color: #49b9af;
+  @extend %trans;
+}
+
+.add-new * {
+  color: $wColor;
+  text-decoration: none;
+}
+
+.btn-block {
+  @extend .block;
+  width: 100%;
+}
+
+.btn-trans { background: none; }
+
+.btn-animate {
+  @extend .overHide;
+  display: inline-block;
+}
+
+.btn-animate .btn::before {
+  content: attr(data-html);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.btn-animate-ver .btn::before {
+  top: 105%;
+  left: 0;
+}
+
+.btn-animate-ver:hover .btn {
+  @include prefix(transform, translateY(-105%));
+}
+
+.btn-animate-hor .btn::before {
+  left: -105%;
+  top: 0;
+}
+
+.btn-animate-hor:hover .btn {
+  @include prefix(transform, translateX(105%));
+}
+
+.btn-circle {
+  border: 1px solid $mainColor;
+  @include prefix(border-radius, 50px);
+  color: $mainColor;
+  padding: 20px !important;
+  margin: 30px auto;
+}
+
+.btn-circle:hover {
+  background-color: $mainColor;
+  color: $wColor;
+}
+/********************/

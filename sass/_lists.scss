@@ -1,0 +1,19 @@
+/* list styles */
+ul.list-odd li, ul.list-even li {
+  padding: 5px
+}
+
+ul.list-odd li:nth-child(odd) {
+  background-color: $xColor;
+}
+ul.list-odd li:nth-child(even) {
+  background-color: $zColor;
+}
+
+ul.list-even li:nth-child(even) {
+  background-color: $zColor;
+}
+ul.list-even li:nth-child(odd) {
+  background-color: $xColor;
+}
+/********************/

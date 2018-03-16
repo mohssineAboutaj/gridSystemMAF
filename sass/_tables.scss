@@ -1,0 +1,45 @@
+/* table styles */
+.table {
+  margin: 10px 0px 20px 0px;
+  min-width: 325px;
+  display: table;
+  @extend .txt-c;
+  @include prefix(box-shadow, 3px 3px 7px #B5B5B5);
+  @include prefix(border-radius, 5px);
+}
+
+.table td {
+  padding: 4px;
+  vertical-align: middle;
+}
+
+.table-hover { background: $wColor }
+
+.table-hover tr:hover {
+  background-color: $zColor;
+  cursor: default;
+}
+
+.table-hover tr:first-child { background: none }
+
+.table-alter tr:nth-child(odd) { background: $zColor; }
+
+.table-alter tr:nth-child(even) { background: $xColor; }
+
+.table-darkhead thead, .table-darkhead tr:first-of-type {
+  background: $darkColor;
+  color: $xColor;
+  text-transform: uppercase
+}
+
+.table-lighthead thead, .table-lighthead tr:first-of-type {
+  background: $xColor;
+  color: $darkColor;
+  text-transform: uppercase
+}
+
+.table-border, .table-border td {
+  border: 1px solid  #ccc;
+  border-collapse: collapse;
+}
+/********************/

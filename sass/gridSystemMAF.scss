@@ -1,46 +1,62 @@
 /*
   * Project Name : gridSystemMAF
-  * Description  : This is grid system for elements using media query Css3 , you can use it to make your website resposive in all screens
+  * Description  : This is grid system for elements using media query Css3 , you can use it to make your website fully resposive and more properties
   * Author       : Mohssine Aboutaj
-  * Version      : v1.1.20
+  * Version      : v2.2.11
 */
 
-// function for prefixes CSS-3 property
-@mixin prefix($property, $value){
-  -webkit-#{$property}: $value;
-  -moz-#{$property}: $value;
-  -ms-#{$property}: $value;
-  -o-#{$property}: $value;
-  #{$property}: $value;
-}
-
-// Main colors on this framework
-$darkColor: #272727;
-$wColor: #fff;
-$bg: #eaeaea;
-$xColor: #eee;
-$zColor: #ddd;
-/********************/
+@import 'colors-prefix';
 
 /* some classes to reset and clear */
 .clearfix { clear: both }
+
 .hide { display: none }
+
 .ib { display: inline-block }
+
+.block { display: block }
+
 .nopm { padding: 0;margin: 0}
+
 .overHide { overflow: hidden}
+
 .fl-l { float: left}
+
 .fl-r { float: right}
+
 .nofl { float: none}
+
 .no-border { border: none}
+
 .no-decore, .no-decore li, .no-decore a {
   text-decoration: none;
   list-style: none;
 }
+
 .no-decore a { color: $wColor }
+
 .txt-c { text-align: center }
+
 .cap { text-transform: capitalize }
+
 .upper { text-transform: uppercase }
+
 .rel { position: relative }
+
+.abs { position: absolute }
+
+.row, .row-around, .row-between, .hor-center, .ver-center {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row-around { justify-content: space-around }
+
+.row-between { justify-content: space-between }
+
+.hor-center { justify-content: center }
+
+.ver-center { align-items: center }
 /********************/
 
 /* reset border, margin, padding, float, textDecoration, listStyle */
@@ -66,6 +82,10 @@ $right: right;
 /* All screens */
 .grid-full { width: 100% }
 .grid-half { width: 50% }
+.grid-1-4 { width: 25% }
+.grid-3-4 { width: 75% }
+.grid-1-3 { width: calc(100% / 3) }
+.grid-2-3 { width: calc((100% / 3) * 2) }
 /********************/
 
 /* Mobile screens */
@@ -74,19 +94,20 @@ $right: right;
   body {
     width: 100%;
     overflow-x: auto;
-    font-size: 8px;
+    min-width: 340px;
   }
-  p { line-height: 1.2 }
   /* Classes */
   @for $i from 12 through 1 {
-    .grid-#{$i}-xs { width: 100% / (12 / $i) - 1 }
-    .grid-#{$i}-xs { margin: 0% 0.5% 0.5%; }
+    .grid-#{$i}-xs {
+      width: 100% / (12 / $i) - 2;
+    }
+    .grid-#{$i}-xs-n { width: 100% / (12 / $i) }
   }
   .nav { min-height: 60px }
   .btn, .btn::before {
     padding: 2px 5px !important;
     margin: 1px;
-    font-size: 1.5em;
+    font-size: 1em;
     @include prefix(border-radius, 1px);
   }
   .container {
@@ -98,23 +119,24 @@ $right: right;
   table {
     overflow-x: auto;
     min-width: 100% !important;
+    font-size: 8px;
   }
 }
 
 /* Tablet screens */
 @media ( min-width: 769px) and ( max-width: 991px) {
-  /* Elements */
-  p { line-height: 1.3 }
   /* Classes */
   @for $i from 12 through 1 {
-    .grid-#{$i}-sm { width: 100% / (12 / $i) - 2 }
-    .grid-#{$i}-sm { margin: 0% 1% 1%; }
+    .grid-#{$i}-sm {
+      width: 100% / (12 / $i) - 3;
+    }
+    .grid-#{$i}-sm-n { width: 100% / (12 / $i) }
   }
   .nav { min-height: 55px }
   .btn, .btn::before {
     padding: 5px 10px !important;
     margin: 2px;
-    font-size: 1.3em;
+    font-size: 1.05em;
     @include prefix(border-radius, 4px);
   }
   .container {
@@ -124,12 +146,12 @@ $right: right;
 
 /* Meduim screens */
 @media ( min-width: 992px) and ( max-width: 1199px) {
-  /* Elements */
-  p { line-height: 1.4 }
   /* Classes */
   @for $i from 12 through 1 {
-    .grid-#{$i}-md { width: 100% / (12 / $i) - 3 }
-    .grid-#{$i}-md { margin: 0% 1.5% 1.5%; }
+    .grid-#{$i}-md {
+      width: 100% / (12 / $i) - 4;
+    }
+    .grid-#{$i}-md-n { width: 100% / (12 / $i) }
   }
   .btn, .btn::before {
     padding: 7px 15px !important;
@@ -144,17 +166,17 @@ $right: right;
 
 /* Larger screens */
 @media ( min-width: 1200px) {
-  /* Elements */
-  p { line-height: 1.5 }
   /* Classes */
   @for $i from 12 through 1 {
-    .grid-#{$i}-lg { width: 100% / (12 / $i) - 4 }
-    .grid-#{$i}-lg { margin: 0% 2% 2%; }
+    .grid-#{$i}-lg {
+      width: 100% / (12 / $i) - 4;
+    }
+    .grid-#{$i}-lg-n { width: 100% / (12 / $i) }
   }
   .btn, .btn::before {
-    padding: 10px 20p !importantx;
+    padding: 10px 20px !important;
     margin: 4px;
-    font-size: 1em;
+    font-size: 1.15em;
     @include prefix(border-radius, 5px);
   }
   .container {
@@ -165,9 +187,14 @@ $right: right;
 
 /* Mobile screens and Tablet */
 @media (max-width: 991px) {
-  nav {
-    z-index: 3;
+  nav.sm-fixed {
+    z-index: 5;
     position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: block;
   }
   .navbar {
     width: 100% !important;
@@ -184,13 +211,15 @@ $right: right;
     top: 55px;
     width: 100%;
     height: 0%;
-    z-index: 3;
+    z-index: 5;
     overflow-y: auto;
     padding: 0px 0px 0px 10px;
     @include prefix(transition, all 0.5s linear);
+    text-align: $left;
   }
   .dropdown a {
     display: block;
+    width: 100%;
     font-size: 24px;
     @include prefix(transition, all .5s ease-in-out);
     cursor: pointer;
@@ -206,6 +235,10 @@ $right: right;
   .dropdown-light, .dropdown-dark .active, .dropdown-dark a:hover {
     background-color: $wColor !important;
     color: $darkColor !important;
+  }
+  .dropdown-inherit {
+    background-color: inherit !important;
+    color: inherit !important;
   }
   .dropdown-custom {
     background-color: transparent;
@@ -228,7 +261,7 @@ $right: right;
   .aside-menu {
     position: absolute;
     background-color: $darkColor !important;
-    z-index: 3;
+    z-index: 5;
     text-transform: capitalize;
   }
 
@@ -251,27 +284,30 @@ body {
   overflow-x: hidden;
 }
 
-header, section, footer {
+header, .section, footer {
   @extend .rel;
 }
 
-header { margin-bottom: 30px }
+header { padding-bottom: 50px }
 
-section { margin: 30px 0px }
-
-footer { margin-top: 30px }
-/* convert letters of all Heading to UPPERCASE */
-@for $heading from 1 through 6 {
-  h#{$heading}, h#{$heading} * {
-    text-transform: uppercase;
-    color: $darkColor;
-  }
+.section {
+  padding: 50px 0px;
+  @extend .overHide;
 }
-/********************/
+
+footer { padding-top: 50px }
+
+@import 'heading';
 
 .nav {
-  margin: 0px 0px 5px 0px;
+  margin: 0 !important;
   padding: 0;
+  z-index: 5;
+  @extend .grid-full;
+  @extend .block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav .logo {
@@ -289,33 +325,52 @@ footer { margin-top: 30px }
   color: $darkColor;
 }
 
+.nav-dark-trans {
+  background-color: rgba(39, 39, 39, .5);
+  color: $wColor;
+}
+
+.nav-light-trans {
+  background-color: rgba(255, 255, 255, .5);
+  color: $darkColor;
+}
+
+.nav-dark *, .nav-dark-trans *, footer-dark * { color: $wColor }
+
+.nav-light *, .nav-light-trans * footer-light * { color: $darkColor }
+
+ul.navbar { margin: -5px 0 }
+
 ul.navbar , .navbar * {
   @extend .no-decore;
   @extend .nopm;
   text-transform: capitalize
 }
 
-.navbar a { padding: 5px 10px; }
+.navbar a {
+  padding: 5px 10px;
+  @extend %trans;
+}
 
 .nav-btn {
   @include prefix(border-radius, 10%);
-  border: 1px solid #bbb;
-  color: $wColor;
-  text-align: center;
-  font-size: 32px;
+  border: 1px solid $mainColor;
+  color: $xColor;
+  @extend .txt-c;
+  font-size: 25px;
   width: 40px;
   height: 40px;
   position: absolute;
   top: 5px;
-  z-index: 3;
+  z-index: 5;
   @extend %trans;
 }
 .nav-btn-right { right: 5px; }
 .nav-btn-left { left: 5px; }
 
 .nav-btn:hover {
-  color: #bbb;
-  border: 1px solid $wColor;
+  color: $mainColor;
+  border-color: $xColor;
 }
 
 .container {
@@ -329,10 +384,11 @@ ul.navbar , .navbar * {
   right: 0;
   left: 0;
   top: 0;
-  width: 100%;
+  @extend .grid-full;
   height: 100%;
   color: $wColor;
 }
+
 @for $opacityBg from 10 through 1 {
   .overlay-#{$opacityBg} {
       background: rgba(0,0,0,(1 / (10 / $opacityBg))); 
@@ -341,274 +397,30 @@ ul.navbar , .navbar * {
 
 /********************/
 
-/* form styles */
-.form {
-  max-width: 600px;
-  text-transform: capitalize;
+@import 'forms';
+@import 'alerts';
+@import 'btns';
+@import 'tables';
+@import 'panels';
+@import 'lists';
+
+/* accordion styles */
+.accordion { @extend .block }
+
+.accordion .active-acc { background-color: $mainColor }
+
+.accordion .accordion-part { margin-bottom: 5px }
+
+.accordion .accordion-heading {
+  @extend .txt-c;
+  padding: 10px 20px;
+  background-color: $xColor;
+  @extend %trans;
 }
 
-.form .form-row {
-  overflow: hidden;
-}
-
-.form .form-row label {
-  float: $left;
-}
-
-.form .form-row .input-box {
-  @extend .rel;
-  float: $right;
-}
-
-.form .form-row .input-box input[type='radio'],
-.form .form-row .input-box input[type='checkbox'] {
-  float: $left;
-  margin: 0 5px;
-}
-
-.form .form-row .input-box input:not([type='radio']), 
-.form .form-row .input-box input:not([type='checkbox']), 
-.form .form-row .input-box select,
-.form .form-row .input-box textarea {
-  width: 100%;
-  padding: 5px;
-  @include prefix(border-radius, 10px);
-}
-
-.form > input[type="submit"], .form > input[type="reset"] {
-  font-family: fontAwesome, arial;
-  float: $right;
-  background-color: #AEA8D3;
-  text-transform: uppercase;
-  padding: 5px 10px;
-  @include prefix(border-radius, 10px);
-}
-
-.form-center {
-  margin: 10px auto 100px;
-}
-
-.form-right { float: $right }
-.form-left { float: $left }
-
-.form-light input {
-  border: 1px solid $zColor;
-  color: $darkColor;
-  background: $wColor;
-}
-
-.form-dark input {
-  border: 1px solid $zColor;
-  color: $zColor;
-  background: $darkColor;
-}
-
-.form-trans input {
+.accordion .accordion-body {
   border: 1px solid $xColor;
-  color: $xColor;
-  background: transparent;
-}
-/********************/
-/* alert classes */
-.alert {
-  display: block;
   padding: 5px;
-  margin: 5px 0px;
-  color: $darkColor;
-}
-
-.alert-error { background-color: rgba(246, 71, 71, 0.25) }
-.alert-valide { background-color: rgba(145, 180, 150, 0.5) }
-/********************/
-
-/* buttons style */
-button { @extend %trans }
-
-.btn {
-  border: none;
-  display: inline-block;
-  text-transform: uppercase;
-  list-style: none;
-  text-decoration: none;
-  color: $wColor;
-  @extend %trans;
-  margin: 5px;
-  padding: 2px 4px;
-  @include prefix(border-radius, 5px);
-}
-
-.btn-sky { background: #49b9ef; }
-.btn-sky:hover { background: #49b9af; }
-
-.btn-fire { background: #D64541; }
-.btn-fire:hover { background: #EF4836; }
-
-.btn-grass { background: #91B496; }
-.btn-grass:hover { background: #87D37C; }
-
-.add-new {
-  position: fixed;
-  display: block;
-  z-index: 9999;
-  @include prefix(border-radius, 50%);
-  font-size: 20px !important;
-  font-weight: bold;
-  line-height: 20px;
-  width: 30px;
-  height: 30px;
-  padding: 5px 0;
-  text-align: center;
-  bottom: 10px;
-  left: 10px;
-  background: #49b9ef;
-  font-size: 10px;
-}
-
-.add-new:hover {
-  background-color: #49b9af;
-  @extend %trans;
-}
-
-.add-new * {
-  color: $wColor;
-  text-decoration: none;
-}
-
-.btn-block {
-  display: block;
-  width: 100%;
-}
-
-.btn-trans { background: none; }
-
-.btn-animate {
-  @extend .overHide;
-  display: inline-block;
-}
-
-.btn-animate .btn::before {
-  content: attr(data-html);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-.btn-animate-ver .btn::before {
-  top: 105%;
-  left: 0;
-}
-
-.btn-animate-ver:hover .btn {
-  @include prefix(transform, translateY(-105%));
-}
-
-.btn-animate-hor .btn::before {
-  left: -105%;
-  top: 0;
-}
-
-.btn-animate-hor:hover .btn {
-  @include prefix(transform, translateX(105%));
-}
-/********************/
-
-/* table styles */
-.table {
-  margin: 10px 0px 20px 0px;
-  min-width: 325px;
-  display: table;
-  text-align: center;
-  @include prefix(box-shadow, 3px 3px 7px #B5B5B5);
-  @include prefix(border-radius, 5px);
-}
-
-.table td {
-  padding: 4px;
-  vertical-align: middle;
-}
-
-.table-hover { background: $wColor }
-
-.table-hover tr:hover {
-  background-color: $zColor;
-  cursor: default;
-}
-
-.table-hover tr:first-child { background: none }
-
-.table-alter tr:nth-child(odd) { background: $zColor; }
-
-.table-alter tr:nth-child(even) { background: $xColor; }
-
-.table-darkhead thead, .table-darkhead tr:first-of-type {
-  background: $darkColor;
-  color: $xColor;
-  text-transform: uppercase
-}
-
-.table-lighthead thead, .table-lighthead tr:first-of-type {
-  background: $xColor;
-  color: $darkColor;
-  text-transform: uppercase
-}
-
-.table-border, .table-border td {
-  border: 1px solid  #ccc;
-  border-collapse: collapse;
-}
-/********************/
-/* panel layout */
-.panel {
-  display: block;
-  margin-bottom: 20px;
-  padding: 0;
-  border: 1px solid $darkColor;
-  @include prefix(border-radius, 5px);
-  overflow: hidden;
-}
-
-.panel:first-of-type {
-  margin-top: 20px;
-}
-
-.panel .p-heading, .panel .p-body {
-  display: block;
-  padding: 5px;
-}
-
-.panel .p-heading {
-  background-color: #4B77BE;
-  margin: 0 !important;
-  @extend .rel;
-  color: $wColor
-}
-
-.panel .p-body {
-  background-color: $wColor;
-  margin: 0 !important;
-  text-transform: capitalize;
-  overflow: hidden
-}
-/********************/
-
-/* list styles */
-ul.list-odd li, ul.list-even li {
-  padding: 5px
-}
-
-ul.list-odd li:nth-child(odd) {
-  background-color: $xColor;
-}
-ul.list-odd li:nth-child(even) {
-  background-color: $zColor;
-}
-
-ul.list-even li:nth-child(even) {
-  background-color: $zColor;
-}
-ul.list-even li:nth-child(odd) {
-  background-color: $xColor;
+  margin: 0;
 }
 /********************/

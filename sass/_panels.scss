@@ -1,0 +1,33 @@
+/* panel layout */
+.panel {
+  @extend .block;
+  margin-bottom: 20px;
+  padding: 0;
+  border: 1px solid $darkColor;
+  @include prefix(border-radius, 5px);
+  overflow: hidden;
+}
+
+.panel:first-of-type {
+  margin-top: 20px;
+}
+
+.panel .p-heading, .panel .p-body {
+  @extend .block;
+  padding: 5px;
+}
+
+.panel .p-heading {
+  background-color: #4B77BE;
+  margin: 0 !important;
+  @extend .rel;
+  color: $wColor
+}
+
+.panel .p-body {
+  background-color: $wColor;
+  margin: 0 !important;
+  text-transform: capitalize;
+  overflow: hidden
+}
+/********************/

@@ -1,0 +1,68 @@
+/* form styles */
+.form {
+  max-width: 600px;
+  text-transform: capitalize;
+}
+
+.form .form-row {
+  overflow: hidden;
+}
+
+.form .form-row label {
+  float: $left;
+}
+
+.form .form-row .input-box {
+  @extend .rel;
+  float: $right;
+}
+
+.form .form-row .input-box input[type='radio'],
+.form .form-row .input-box input[type='checkbox'] {
+  float: $left;
+  margin: 0 5px;
+}
+
+.form .form-row .input-box input:not([type='radio']), 
+.form .form-row .input-box input:not([type='checkbox']), 
+.form .form-row .input-box select,
+.form .form-row .input-box textarea {
+  width: 100%;
+  padding: 5px;
+  @include prefix(border-radius, 10px);
+}
+
+.form > input[type="submit"], .form > input[type="reset"] {
+  font-family: fontAwesome, arial;
+  float: $right;
+  background-color: #AEA8D3;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  @include prefix(border-radius, 10px);
+}
+
+.form-center {
+  margin: 10px auto 100px;
+}
+
+.form-right { float: $right }
+.form-left { float: $left }
+
+.form-light input {
+  border: 1px solid $zColor;
+  color: $darkColor;
+  background: $wColor;
+}
+
+.form-dark input {
+  border: 1px solid $zColor;
+  color: $zColor;
+  background: $darkColor;
+}
+
+.form-trans input {
+  border: 1px solid $xColor;
+  color: $xColor;
+  background: transparent;
+}
+/********************/

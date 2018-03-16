@@ -1,0 +1,11 @@
+/* alert classes */
+.alert {
+  @extend .block;
+  padding: 5px;
+  margin: 5px 0px;
+  color: $darkColor;
+}
+
+.alert-error { background-color: rgba(246, 71, 71, 0.25) }
+.alert-valide { background-color: rgba(145, 180, 150, 0.5) }
+/********************/

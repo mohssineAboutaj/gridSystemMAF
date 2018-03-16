@@ -13,9 +13,6 @@ document.querySelectorAll('input').forEach(function(myInput){
   });
 },this);
 
-// function to munis the height of navbar to first h1 in page
-document.querySelector('h1').style.marginTop = document.querySelector('nav').clientHeight + 'px';
-
 // add star aside required inputs
 document.querySelectorAll('input,textarea').forEach(function(myInput){
   if (myInput.hasAttribute('required','required')) {
@@ -35,7 +32,7 @@ document.querySelectorAll('input,textarea').forEach(function(myInput){
 // confirm are you sure
 document.querySelectorAll('.confirm').forEach(function(confirmBtn) {
   confirmBtn.addEventListener("click",function(){
-    return confirm("Are you sure you want to "+ confirmBtn.textContent +" ?");
+    return confirm('Are you sure you want to '+ confirmBtn.textContent +' ?');
   });
 }, this);
 
@@ -71,7 +68,6 @@ var navbtn = document.querySelector('.nav-btn'),
 navbtn.onclick = function(){
   if(navbar.style.height === '100%'){
     navbar.style.height = '0%';
-    navbtn.innerHTML = '&equiv;';
   } else {
     navbar.style.height = '100%';
   }
@@ -84,6 +80,10 @@ if (window.innerWidth < 992) {
       navbtn.innerHTML = '&equiv;';
     });
   }, this);
+  // function to munis the height of navbar to first h1 in page
+  if (document.querySelector('.nav')) {
+    document.body.firstElementChild.style.marginTop = document.querySelector('nav').clientHeight + 'px';
+  }
 }
 
 // Show or hidden the navbar button in mini-screens
@@ -127,8 +127,44 @@ if (document.querySelector('.input-file')) {
 // progress bar
 var progressContainer = document.querySelectorAll('.progress'),
     i;
+
 if (progressContainer) {
   for(i = 0;i < progressContainer.length;i++){
-    progressContainer[i].querySelector('span').style.width = progressContainer[i].querySelector('span').getAttribute('progress-value');
+    progressContainer[i].querySelector('span').style.width =
+      progressContainer[i].querySelector('span').getAttribute('progress-value');
   }
 }
+
+// accordion function
+function accordion(accordionButtons, accordionContent, accordionClassActive){
+  var btn = document.querySelectorAll(accordionButtons),
+      content = document.querySelectorAll(accordionContent),
+      i;
+  if(btn && content){
+    document.querySelector('.accordion div[data-target="#collapseOne"]').classList.add('active-acc');
+    for (i = 0; i < btn.length; i++) {
+      content[i].classList.add('hide');
+      content[0].classList.remove('hide');
+      btn[i].onclick = function(){
+        for (i = 0; i < btn.length; i++) {
+          btn[i].classList.remove(accordionClassActive);
+          content[i].classList.add('hide');
+        }
+        this.classList.add(accordionClassActive);
+        document.querySelector('div' + this.getAttribute('data-target')).classList.toggle('hide');
+      };
+    }
+  } else {
+    return 0;
+  }
+}
+
+accordion('div.accordion-heading','div[data-parent="#accordion"]','active-acc');
+
+// loading function
+window.onload = function(){
+  var loadingMAF = document.querySelector('.loadingMAF');
+  if (loadingMAF){
+    loadingMAF.style.display = 'none';
+  }
+};
