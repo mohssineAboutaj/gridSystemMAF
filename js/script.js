@@ -161,7 +161,7 @@ function accordion(accordionButtons, accordionContent, accordionClassActive){
 
 accordion('div.accordion-heading','div[data-parent="#accordion"]','active-acc');
 
-// loading function
+// hide loading animation on page finishing the load
 window.onload = function(){
   var loadingMAF = document.querySelector('.loadingMAF');
   if (loadingMAF){
