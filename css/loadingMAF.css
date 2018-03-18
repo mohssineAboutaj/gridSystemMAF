@@ -3,8 +3,8 @@
 ***	Autor        : Mohssine Aboutaj
 *** License      : FREE
 *** Contact      : mohssineaboutajtemplates@gmail.com
-*** Source code  : 
-*** How to use   : 
+*** Source code  : https://github.com/mohssineAboutaj/gridSystemMAF/blob/master/css/loadingMAF.css
+*** How to use & live prewiew : https://codepen.io/MohssineAboutajWeb/post/loading-animation
 */
 
 /* global styles */
@@ -147,7 +147,10 @@ body { position: relative; }
 	content: '';
 	width: 150px;
 	height: 150px;
-	border: 2px solid #272727;
+	border: 10px solid rgba(250, 250, 250, .25);
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
 }
 
 .loading-snake > * {
@@ -164,35 +167,35 @@ body { position: relative; }
 }
 
 .loading-snake .s1 {
-	left: calc(50% - 50px);
+	left: calc(50% - 40px);
 	-webkit-animation-delay: 0s;
 	-moz-animation-delay: 0s;
 	-o-animation-delay: 0s;
 	animation-delay: 0s;
 }
 .loading-snake .s2 {
-	left: calc(50% - 30px);
+	left: calc(50% - 20px);
 	-webkit-animation-delay: 0s;
 	-moz-animation-delay: 0s;
 	-o-animation-delay: 0s;
 	animation-delay: 0.1s;
 }
 .loading-snake .s3 {
-	right: calc(50% - 10px);
+	left: 50%;
 	-webkit-animation-delay: 0s;
 	-moz-animation-delay: 0s;
 	-o-animation-delay: 0s;
 	animation-delay: 0.2s;
 }
 .loading-snake .s4 {
-	right: calc(50% - 30px);
+	left: calc(50% + 20px);
 	-webkit-animation-delay: 0s;
 	-moz-animation-delay: 0s;
 	-o-animation-delay: 0s;
 	animation-delay: 0.3s;
 }
 .loading-snake .s5 {
-	right: calc(50% - 50px);
+	left: calc(50% + 40px);
 	-webkit-animation-delay: 0s;
 	-moz-animation-delay: 0s;
 	-o-animation-delay: 0s;
